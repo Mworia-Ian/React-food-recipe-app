@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <h2 className="text-4xl tracking-wider font-semibold italic size-8 text-red-500">
-          <NavLink to={"/"} className=" text-red-800 hover:text-gray-900">
+          <NavLink to={"/"} className=" text-red-800 hover:text-black-900">
             ThunderRecipe
           </NavLink>
         </h2>
