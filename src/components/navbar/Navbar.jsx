@@ -55,7 +55,7 @@ export default function Navbar() {
         }}
       >
         <div
-          className="header-contents"
+          className="header-contents1"
           style={{
             position: "absolute",
             display: "flex",
