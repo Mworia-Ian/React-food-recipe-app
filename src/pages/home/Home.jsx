@@ -20,7 +20,7 @@
 //   );
 // }
 
-// export default Home;
+// export default Home;//
 
 
 import React from "react";
@@ -34,7 +34,7 @@ function Home() {
   if (loading) return <div>Please Wait as we fetch your recipes!!!</div>;
 
   return (
-    <div className="py-8 container mx-auto bg-gray-300 flex flex-wrap justify-center gap-10 bg-cover bg-center" style={{backgroundImage: "url('/src/home/image')"}}>
+    <div className="py-8 container mx-auto bg-gray-300 flex flex-wrap justify-center gap-10 bg-cover bg-center" >
       {recipeList && recipeList.length > 0 ? (
         recipeList.map((item) => <RecipeItem key={item.recipe_id} item={item} />)
       ) : (
