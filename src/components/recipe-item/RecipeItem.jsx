@@ -11,6 +11,7 @@ function RecipeItem({ item }) {
     image_url,
     // social_rank,
     // publisher_url,
+    ingredients,
   } = item;
 
   return (
@@ -22,6 +23,7 @@ function RecipeItem({ item }) {
      </div>
      <div>
       <span className="text-l text-orange-500 font-bold"><b>Publisher:</b> {publisher}</span>
+      <h4>{ingredients}</h4>
       <h3 className="font-bold text-2xl truncate  text-orange-500">{title}</h3>
       <Link to={`./recipe-item/${recipe_id}`} className="text-sm mt-5 p-3 px-8 rounded-lg font-medium tracking-wider inline-block shadow-md bg-blue-950 text-orange uppercase ">
       Recipe Details
