@@ -60,7 +60,7 @@ function RecipeItem({ item }) {
      <div>
       <span className="text-l text-white font-bold"><b>Publisher:</b> {publisher}</span>
       <h3 className="font-bold text-2xl truncate  text-white">{title}</h3>
-      <Link to={`./recipe-item/${recipe_id}`} className="text-sm mt-5 p-3 px-8 rounded-lg font-medium tracking-wider inline-block shadow-md bg-blue-950 text-orange uppercase ">
+      <Link to={`./recipe-item/${recipe_id}`} className="text-sm mt-5 p-3 px-8 rounded-lg font-medium tracking-wider inline-block shadow-md bg-gradient-to-r from-blue-800 to-blue-700 text-orange uppercase hover:bg-gradient-to-r hover:from-blue-700 hover:to-blue-600 hover:text-white">
       Recipe Details
       </Link>
      </div>
