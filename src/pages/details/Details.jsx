@@ -44,6 +44,9 @@ function Details() {
                 Publisher: {recipeDetails.publisher}
               </span>
             </div>
+            <span>
+              Ingredients: {recipeDetails.ingredients}
+            </span>
             <div>
               <a
                 href={recipeDetails.source_url}
