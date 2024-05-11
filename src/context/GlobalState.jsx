@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from "react";
 
 export const GlobalContext = createContext(null);
 
@@ -7,7 +7,7 @@ function GlobalState({ children }) {
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
   const [recipeDetails, setRecipeDetails] = useState(null);
-  const [favoriteList, setFavoriteList] = useState([])
+  const [favoriteList, setFavoriteList] = useState([]);
 
   async function handleSubmit(e) {
     setLoading(true);
@@ -30,7 +30,7 @@ function GlobalState({ children }) {
 
       console.log(data);
     } catch (error) {
-      console.error("error fetching recipes", error);
+      console.error("Error fetching recipes", error);
       setLoading(false);
       setRecipeList([]);
     }
@@ -38,21 +38,25 @@ function GlobalState({ children }) {
     console.log(loading, recipeList);
   }
 
-  function handleAddToFavorites (getCurrentItem){
-      console.log(getCurrentItem)
-      let copyFavoritesList = [...favoriteList]
-      const index = copyFavoritesList.findIndex(item => item.id === getCurrentItem.id)
+  function handleAddToFavorites(getCurrentItem) {
+    console.log(getCurrentItem);
+    const updatedFavoritesList = [...favoriteList];
+    const index = updatedFavoritesList.findIndex(
+      (item) => item.recipe_id === getCurrentItem.recipe_id
+    );
 
-      if(index === -1){
-        copyFavoritesList.push(getCurrentItem)
-      }
-      else{
-        copyFavoritesList.splice(index)
-      }
+    if (index === -1) {
+      updatedFavoritesList.push(getCurrentItem);
+      setFavoriteList(updatedFavoritesList); 
+    }
+    console.log(updatedFavoritesList);
+  }
 
-      setFavoriteList(copyFavoritesList)
-
-      console.log(favoriteList)
+  function handleRemoveFromFavorites(recipeIdToRemove) {
+    const updatedFavoritesList = favoriteList.filter(
+      (item) => item.recipe_id !== recipeIdToRemove
+    );
+    setFavoriteList(updatedFavoritesList);
   }
 
   return (
@@ -66,7 +70,8 @@ function GlobalState({ children }) {
         recipeDetails,
         setRecipeDetails,
         handleAddToFavorites,
-        favoriteList
+        favoriteList,
+        handleRemoveFromFavorites 
       }}
     >
       {children}
@@ -75,6 +80,3 @@ function GlobalState({ children }) {
 }
 
 export default GlobalState;
-
-
-
