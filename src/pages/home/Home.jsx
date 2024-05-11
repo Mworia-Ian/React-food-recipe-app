@@ -9,7 +9,7 @@ function Home() {
   if (loading) return <div>Please Wait as we fetch your recipes!!!</div>;
 
   return (
-    <div className="bg-Dpplue rounded-3xl border py-8 container mx-auto flex flex-wrap justify-center gap-10">
+    <div className="bg-Dpplue rounded-3xl py-8 container mx-auto flex flex-wrap justify-center gap-10">
 
       {recipeList && recipeList.length > 0 ? (
         recipeList.map((item) => <RecipeItem key={item.recipe_id} item={item} />)

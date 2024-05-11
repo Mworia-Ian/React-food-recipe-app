@@ -7,7 +7,7 @@ function App() {
  
 
   return (
-      <div className="min-h-screen p-6 text-orange-500 text-lg">
+      <div className="bg-Dpplue min-h-screen p-6 text-orange-500 text-lg">
         <Navbar />
         <div className="flex justify-center items-center"></div>
         <Routes>
