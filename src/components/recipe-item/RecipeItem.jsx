@@ -48,7 +48,9 @@ function RecipeItem({ item }) {
     image_url,
     // social_rank,
     // publisher_url,
-  } = item;
+  } = item; 
+
+  
 
   return (
     <div className="flex flex-col w-80 overflow-hidden p-5 bg-green-500 shadow-xl gap-5 border-2 rounded-2xl border-white ">
