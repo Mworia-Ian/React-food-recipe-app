@@ -6,11 +6,12 @@ function Favorites() {
     const { favoriteList} = useContext(GlobalContext);
   
     return (
-      <div className="py-8 container mx-auto flex flex-wrap justify-center gap-10">
+      <div className="bg-Dpplue rounded-3xl py-9 container mx-auto flex flex-wrap justify-center gap-10 ">
+
         {favoriteList && favoriteList.length > 0 ? (
           favoriteList.map((item) => <RecipeItem key={item.recipe_id} item={item} />)
         ) : (
-          <div className="text-2xl font-bold">
+          <div className="text-Electic-blue text-2xl font-bold ">
             No Favorites Yet
           </div>
         )}
