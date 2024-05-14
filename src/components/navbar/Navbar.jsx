@@ -8,7 +8,7 @@ export default function Navbar() {
   console.log(searchParam);
 
   return (
-    <nav className="flex justify-between items-center py-8 container mx-auto flex-col lg:flex-row gap-5 lg:gap-0">
+    <nav className="sticky top-0 flex justify-between items-center py-8 container mx-auto flex-col lg:flex-row gap-5 lg:gap-0 bg-white">
       <h2 className="text-4xl font-semibold">
         <NavLink to={"/"} className="text-bblue hover:text-white hover:bg-bblue rounded p-3 duration-300">Thunder Recipes ⛈</NavLink>
       </h2>
