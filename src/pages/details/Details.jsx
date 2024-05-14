@@ -4,7 +4,7 @@ import { GlobalContext } from "../../context/GlobalState";
 
 function Details() {
   const { id } = useParams();
-  const { recipeList, favoriteList, handleAddToFavorites, handleRemoveFromFavorites } =
+  const { favoriteList, handleAddToFavorites, handleRemoveFromFavorites } =
     useContext(GlobalContext);
   const [recipeDetails, setRecipeDetails] = useState(null);
   const [isFavorite, setIsFavorite] = useState(false); 

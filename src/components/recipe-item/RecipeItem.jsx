@@ -11,7 +11,7 @@ function RecipeItem({ item }) {
     image_url,
     // social_rank,
     // publisher_url,
-    ingredients,
+    // ingredients,
   } = item;
 
   return (

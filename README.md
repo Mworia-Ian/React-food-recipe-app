@@ -12,6 +12,9 @@ This is a react web application where you can search for recipes and it fetches 
 
 ## Resources 
 https://tailwindcss.com/ <br>
+https://www.youtube.com/watch?v=-bEzt5ISACA <br>
+https://figma.com <br>
+
 
 
 ## Technologies used
