@@ -2,13 +2,13 @@
 
 #### Date, 2024/05/11
 
-#### By: <br> *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor*
+#### Developed by: <br> *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor* <br> As part of satisfying the Phase-2 Group Project requirements.
 
 ## Web Link
 https://thunderkitchen.netlify.app/
 
 ## Description
-This is a react web application where you can search for recipes and it fetches it from an API. If you see something interesting, you can add to your Favorites throught the 'add to favorites' button, and also remove form favorites when done. 
+This is a react web application where you can search for recipes and it fetches them from an API. If you see something interesting, you can add it to your Favorites through the 'add to favorites' button, and also remove it from your favorites when done. 
 
 ## Resources 
 https://tailwindcss.com/ <br>
