@@ -22,11 +22,10 @@ function RecipeItem({ item }) {
          />
      </div>
      <div>
-Alinoor
-      <span className="text-m text-Dpplue font-bold"><b>Publisher:</b> {publisher}</span>
+      <span className="text-m text-white font-bold"><b>Publisher:</b> {publisher}</span>
       <h3 className="font-bold text-2xl truncate  text-Electic-blue -500">{title}</h3>
       <Link to={`./recipe-item/${recipe_id}`} className="text-sm mt-6 p-2 px-4 rounded-xl font-medium tracking-wider inline-block shadow-md bg-Dpplue text-white uppercase ">
-main
+
       Recipe Details
       </Link>
      </div>

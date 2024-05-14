@@ -56,7 +56,7 @@ function Details() {
                 Publisher: {recipeDetails.publisher}
               </span>
             </div>
-            <span className="text-gray-500">
+            <span className="text-white">
               Ingredients: {recipeDetails.ingredients}
             </span>
             <div>
@@ -73,7 +73,7 @@ function Details() {
               <button
 
                 onClick={handleToggleFavorites}
-                className="p-3 px-8 rounded-lg text-xl uppercase font-medium tracking-wider mt-3 inline text-white block bg-orange-500 hover:bg-orange-400"
+                className="p-3 px-8 rounded-lg text-xl uppercase font-medium tracking-wider mt-3 inline text-white block bg-Dpplue"
 main
               >
                 {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
