@@ -4,9 +4,10 @@ import { GlobalContext } from "../../context/GlobalState";
 
 function Details() {
   const { id } = useParams();
-  const { recipeList, favoriteList, handleAddToFavorites } =
+  const { recipeList, favoriteList, handleAddToFavorites, handleRemoveFromFavorites } =
     useContext(GlobalContext);
   const [recipeDetails, setRecipeDetails] = useState(null);
+  const [isFavorite, setIsFavorite] = useState(false); 
 
   useEffect(() => {
     async function getRecipeDetails() {
@@ -17,12 +18,22 @@ function Details() {
 
       if (data?.recipe) {
         setRecipeDetails(data.recipe);
+        setIsFavorite(favoriteList.some(item => item.recipe_id === data.recipe.recipe_id));
       } else {
         setRecipeDetails(null);
       }
     }
     getRecipeDetails();
-  }, [id]);
+  }, [id, favoriteList]); 
+
+  const handleToggleFavorites = () => {
+    if (isFavorite) {
+      handleRemoveFromFavorites(recipeDetails.recipe_id);
+    } else {
+      handleAddToFavorites(recipeDetails);
+    }
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <div className="flex flex-col w-80 overflow-hidden p-4 bg-bblue shadow-xl gap-5 border-4 rounded-3xl border-black">
@@ -45,6 +56,9 @@ function Details() {
                 Publisher: {recipeDetails.publisher}
               </span>
             </div>
+            <span className="text-gray-500">
+              Ingredients: {recipeDetails.ingredients}
+            </span>
             <div>
               <a
                 href={recipeDetails.source_url}
@@ -57,19 +71,14 @@ function Details() {
             </div>
             <div className="text-Dpplue" >
               <button
-                onClick={() => handleAddToFavorites(recipeDetails)}
-                className="p-3 px-3 rounded-lg text-m uppercase font-medium tracking-wider mt-4 inline text-white block bg-Dpplue hover:bg-siena "
+
+                onClick={handleToggleFavorites}
+                className="p-3 px-8 rounded-lg text-xl uppercase font-medium tracking-wider mt-3 inline text-white block bg-orange-500 hover:bg-orange-400"
+main
               >
-                {favoriteList &&
-                favoriteList.length > 0 &&
-                favoriteList.findIndex(
-                  (item) => item.recipe_id === recipeDetails.recipe_id
-                ) !== -1
-                  ? "Remove from Favorites"
-                  : "Add to Favorites"}
+                {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
               </button>
             </div>
-            <div className=""></div>
           </>
         )}
         {!recipeDetails && (
