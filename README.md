@@ -2,7 +2,7 @@
 
 #### Date, 2024/05/11
 
-#### By *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor*
+#### By: <br> *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor*
 
 ## Web Link
 
