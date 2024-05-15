@@ -2,7 +2,7 @@
 
 #### Date, 2024/05/11
 
-#### Developed by: <br> *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor* <br> As part of satisfying the Phase-2 Group Project requirements.
+#### Developed by: <br> *Ian M. Mworia* <br> *Nazlin Jemeli* <br> *Willis Mumo* <br> *Adan Ali-Noor* <br> *Rufus Njogu* <br>   As part of satisfying the Phase-2 Group Project requirements.
 
 ## Web Link
 https://thunderkitchen.netlify.app/
